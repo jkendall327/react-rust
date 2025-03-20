@@ -1,5 +1,5 @@
 # Use the official Rust image for building
-FROM rust:1.70-slim as builder
+FROM rust:latest as builder
 
 # Create a new empty shell project
 WORKDIR /usr/src/calculator-api
