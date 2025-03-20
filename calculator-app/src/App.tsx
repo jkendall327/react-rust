@@ -14,7 +14,7 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8080/add', {
+      const response = await fetch('https://backend:8080/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

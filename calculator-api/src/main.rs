@@ -9,17 +9,18 @@ use tower_http::cors::{CorsLayer, Any};
 
 #[tokio::main]
 async fn main() {
-    // Set up CORS
+    // Set up CORS with more specific configuration
     let cors = CorsLayer::new()
-        .allow_methods([Method::GET, Method::POST])
+        .allow_methods([Method::GET, Method::POST, Method::OPTIONS])
+        // In production, specify exact origins instead of Any
         .allow_origin(Any)
-        .allow_headers(Any);
+        .allow_headers(Any)
+        .allow_credentials(true);
 
     // Build our application with a single route
     let app = Router::new()
         .route("/add", post(add_numbers))
         .layer(cors);
-
     // Run the server
     let addr = std::net::SocketAddr::from(([0, 0, 0, 0], 8080));
     println!("Server listening on {}", addr);
