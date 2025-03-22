@@ -33,7 +33,7 @@ if [ -d "calculator-app" ]; then
   git pull
 else
   echo "Cloning repository..."
-  git clone https://your-repository-url.git calculator-app
+  git clone https://github.com/jkendall327/react-rust.git calculator-app
   cd calculator-app
 fi
 
