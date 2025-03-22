@@ -18,7 +18,7 @@ COPY src ./src
 RUN cargo build --release
 
 # Use a minimal alpine image for the runtime
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 # Copy the build artifact from the builder stage
 COPY --from=builder /usr/src/calculator-api/target/release/calculator-api /usr/local/bin/
