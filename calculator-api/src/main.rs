@@ -14,8 +14,7 @@ async fn main() {
         .allow_methods([Method::GET, Method::POST, Method::OPTIONS])
         // In production, specify exact origins instead of Any
         .allow_origin(Any)
-        .allow_headers(Any)
-        .allow_credentials(true);
+        .allow_headers(Any);
 
     // Build our application with a single route
     let app = Router::new()
