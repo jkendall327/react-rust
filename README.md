@@ -2,6 +2,8 @@ This is a trivial app for me to get some hands-on experience with:
 - React/Rust
 - VPS deployment
 
+Currently broken because I messed up relative URLs for the API call.
+
 The app code was graciously provided free of charge by Claude 3.7.
 Hosting by DigitalOcean.
 
